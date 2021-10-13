@@ -62,4 +62,14 @@ public class AdministratorController {
         }
         return new ResponseEntity<>(ResultResponse.builder().status(false).message(RestConstant.RESPONSE_NOT_FOUND_RECORD + id).data(null).build(), HttpStatus.NOT_FOUND);
     }
+
+    @DeleteMapping("/employees/{id}")
+    public ResponseEntity<?> deleteEmployee(@PathVariable("id") long id) {
+        Optional<Employee> employee = employeeService.get(id);
+        if (employee.isPresent()) {
+            employeeService.delete(employee.get());
+            return new ResponseEntity<>(ResultResponse.builder().status(true).message(RestConstant.RESPONSE_FIND_SUCCESSFULLY).data(null).build(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(ResultResponse.builder().status(false).message(RestConstant.RESPONSE_NOT_FOUND_RECORD + id).data(null).build(), HttpStatus.NOT_FOUND);
+    }
 }

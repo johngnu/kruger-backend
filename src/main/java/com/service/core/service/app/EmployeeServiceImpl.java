@@ -63,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void delete(Parameter parameter) {
-
+    public void delete(Employee employee) {
+        employeeRepository.delete(employee);
     }
 }

@@ -24,13 +24,7 @@ public class User {
     private String password;
     @Column(name = "enabled")
     private Boolean enabled;
-    @Temporal(TemporalType.DATE)
-    @Column(name = "birthdate")
-    private Date birthdate;
-    @Column(name = "address")
-    private String address;
-    @Column(name = "account_image")
-    private byte[] accountImage;
+
     @JsonIgnore
     @Column(name = "created_by")
     private String createdBy;

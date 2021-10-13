@@ -36,5 +36,5 @@ public interface EmployeeService {
     void update(Employee employee, EmployeeUpdateDto employeeDto);
 
     @Transactional
-    void delete(Parameter parameter);
+    void delete(Employee employee);
 }
