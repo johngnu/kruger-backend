@@ -7,7 +7,7 @@ Inventario de vacunación de empleados (SpringBoot Demo)
 ``` html
 GET: http://localhost:8090/api/v1/administrator/employees
 ```
-#### Lsitar empleados FILTERS
+#### Listar empleados FILTERS
 ``` html
 Listar por ID vacuna
 GET: http://localhost:8090/api/v1/administrator/employees?vaccine=[1....n]
